@@ -6,7 +6,26 @@ import Card3 from '../../components/Card3';
 import Card4 from '../../components/Card4';
 import Card5 from '../../components/Card5';
 
+import {useState,useEffect} from 'react';
+import axios from 'axios';
+
+
 export default function Skills(){
+const [loader,setLoader] = useState(true);
+    const [skills,setSkills] = useState(null);
+
+    const connectToServer = async  () => axios.get("http://localhost:8000/skills")
+                                            .then(res=>{
+                                        
+                                                console.log(res.data);
+                                                setSkills(res.data);
+                                                setLoader(false)
+                                            }).catch(err=>console.log(err))
+useEffect(()=>{
+   connectToServer();
+},[])
+
+
   return(
     <>
       <Grid container sx={{ p: 3 }} spacing={4}>

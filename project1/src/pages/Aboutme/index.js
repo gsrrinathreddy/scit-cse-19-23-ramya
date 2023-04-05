@@ -1,8 +1,30 @@
-import { Typography } from '@mui/material';
+import { Box, CircularProgress, Typography } from '@mui/material';
+import axios from 'axios';
+import { useEffect,useState} from 'react';
+
+
 
 export default function Aboutme(){
-    return(
+    
+    let[loader,setLoader]=useState(true);
+    let[aboutme,setaboutme]=useState(null);
+
+    const getAboutmeData = async () => axios.get("http://localhost:8000/Aboutme")
+
+                                             .then(res=>{
+                                                setaboutme(res.data)
+                                                setLoader(false)
+                                             }).catch(err => console.log(err))
+        useEffect(()=>{
+            getAboutmeData();
+        },[]) 
+
+console.log("aboutme",aboutme)
+
+
+        return(
         <>
+        
 <Typography>Name: RAMYA MYAKALA</Typography>
 <Typography>Father Name: NARSAIAH</Typography>
 <Typography>Mother Name: LAXMI</Typography>
