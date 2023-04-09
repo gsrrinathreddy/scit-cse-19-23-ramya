@@ -26,8 +26,8 @@ console.log("Contactme",Contactme)
         {
             
         }
-       phone:9014562031'
-       mail:myakalaramya33@gmail.com
+       <Typography>Phone:9014562031</Typography>
+      <Typography> Emailid:myakalaramya33@gmail.com</Typography> 
         
         
         

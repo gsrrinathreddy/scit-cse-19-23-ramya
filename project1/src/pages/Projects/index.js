@@ -22,8 +22,8 @@ const getProjectsData=async () =>axios. get('http://localhost:8000/Projects')
 
 return(
         <>
-       Miniproject:Mobile location proofs for privacy
-        Capstoneproject:E-Commerce website
+      <Typography> Miniproject:Mobile location proofs for privacy</Typography> 
+       <Typography> Capstoneproject:E-Commerce website</Typography> 
       
                </>
     )

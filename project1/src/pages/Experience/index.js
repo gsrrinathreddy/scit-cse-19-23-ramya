@@ -74,7 +74,7 @@ console.log("Experience",Experience)
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            worked as a Web developer in xyz company.
+            As Iam a fresher iam looking for an opportunity where i can build my knowledge
           </Typography>
         </AccordionDetails>
       </Accordion>

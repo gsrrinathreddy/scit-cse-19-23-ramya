@@ -1,5 +1,6 @@
 
-    import axios from 'axios';
+    import { Typography } from '@mui/material';
+import axios from 'axios';
     import { useEffect,useState} from 'react';
 
     export default function Workshop(){
@@ -23,8 +24,8 @@
     console.log("Workshop",Workshop)
     return(
         <>
-        react 
-         powerBi
+         
+         <Typography>PowerBi</Typography>
         
         
         
